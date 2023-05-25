@@ -39,6 +39,17 @@ body {
 .btn {
     height: 19px;
     width: 80px;
+    border-radius: 25px;
+    background-color: silver;
+}
+
+.btn:hover {
+    background-color: grey;
+}
+
+#randomBtn {
+    left: 1.75vw;
+    bottom: 1.25vh;
 }
 
 #headerDiv {
@@ -48,8 +59,8 @@ body {
     background-repeat: space;
     background-size: contain;
     background-color: transparent;
-    border: transparent
-    
+    border: transparent;
+   
 
 }
 
@@ -67,11 +78,12 @@ body {
     margin: auto;
     align-items: center;
     justify-content: center;
-    display: table;
+    display: flex;
     width: 20vw;
     height: 5vh;
     color: linen;
-    
+    bottom: 1vh;
+    left: .2vw;
 }
 
 
@@ -80,6 +92,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #313639;
+    height: 7vh;
     
 }
 
@@ -88,14 +101,17 @@ input {
     display: table-cell;
     margin-bottom: 1vh;
     background-color: transparent;
+    
 }
 
 input {
     border-radius: 25px;
     width: 100%;
-    left: 1vw;
-    text-align: center;
+    right: .1vw;
+    text-align: left;
     background-color: silver;
+    padding: 3px;
+    top: .25vh;
 }
 
 label {
@@ -125,7 +141,7 @@ label {
     height: 53vh;
     width: 20vw; 
     bottom: 10vh;
-    background-color: #3d2720;
+    background-color: transparent;
     
    
 }
@@ -137,30 +153,32 @@ label {
 }
 
 #name {
-    right: 7.5vw;
+    right: 12.5vw;
     text-decoration: underline;
+    bottom: 3vh;
 }
 
 #rarity {
-    right: 1.9vw;
-    top: 35vh;
+    left: 3.25vw;
+    top: 33.5vh;
 }
 
 #set {
     right: 17vw;
     top: 25vh;
-    
+    width: 25vw;
 }
 
 #price {
-    top: 65vh;
-    right: 22.5vw;
+    top: 38vh;
+    right: 52vw;
 
 }
 
 #img {
     top: .75vh;
     border-radius: 4.5%;
+    box-shadow:0 0 15px 12px grey;
 }
 
 h2,
@@ -170,4 +188,11 @@ h3 {
 
 #cardName {
     background-color: transparent;
+}
+
+.hover {
+    cursor: pointer;
+    border-radius: 4.5%;
+    box-shadow:0 0 15px 4px grey;
+    top: 1.5vw;
 }
