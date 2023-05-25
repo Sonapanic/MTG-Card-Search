@@ -38,10 +38,10 @@ $('#cardNameBtn').on('click', (e) => {
             $(`<h1 id="cardName">${dataObj.name}<h1>`).appendTo(name)
 
             let price = $('<div class="h3Div" id="price"></div>').appendTo($('#cardDiv'))
-            dataObj.prices.usd !== null ? $(`<h2>Price: $${dataObj.prices.usd}</h2>`).appendTo(price) : $('<h2>Sorry, no price available.</h2>').appendTo($(price))
+            dataObj.prices.usd !== null ? $(`<h2>Price: $${dataObj.prices.usd}</h2>`).appendTo(price) : $('<h2 class="h3Div"><em>Sorry, no price available.<em></h2>').appendTo($(price))
 
             let imageContainer = $(`<div class="h3Div" id="imageContainer"></div>`).appendTo($('#cardDiv'))
-            dataObj.image_uris ? $(`<img id="img" src="${dataObj.image_uris.normal}">`).appendTo(imageContainer) : $('<h1><em>Sorry, no image available.<em><h1>').appendTo(imageContainer)
+            dataObj.image_uris ? $(`<img id="img" src="${dataObj.image_uris.normal}">`).appendTo(imageContainer) : $('<h1><em class="h3Div" id="noImg">Sorry, no image available.<em><h1>').appendTo(imageContainer)
         } else {
         
             let dataObj = data.data
@@ -62,10 +62,10 @@ $('#cardNameBtn').on('click', (e) => {
                         $(`<h1 id="cardName">${dataObj.name}<h1>`).appendTo(name)
 
                         let price = $('<div class="h3Div" id="price"></div>').appendTo($('#cardDiv'))
-                        dataObj.prices.usd !== null ? $(`<h2>Price: $${dataObj.prices.usd}</h2>`).appendTo(price) : $('<h2>Sorry, no price available.</h2>').appendTo($(price))
+                        dataObj.prices.usd !== null ? $(`<h2>Price: $${dataObj.prices.usd}</h2>`).appendTo(price) : $('<h2><em class="h3Div">Sorry, no price available.<em></h2>').appendTo($(price))
 
                         let imageContainer = $(`<div class="h3Div" id="imageContainer"></div>`).appendTo($('#cardDiv'))
-                        dataObj.image_uris ? $(`<img id="img" src="${dataObj.image_uris.normal}">`).appendTo(imageContainer) : $('<h1><em>Sorry, no image available.<em><h1>').appendTo(imageContainer)
+                        dataObj.image_uris ? $(`<img id="img" src="${dataObj.image_uris.normal}">`).appendTo(imageContainer) : $('<h1><em class="h3Div" id="noImg">Sorry, no image available.<em><h1>').appendTo(imageContainer)
                     })
                 } else {
                     $(`<h2><em>Sorry, no image available for ${dataObj[i].name}.<em><h2>`).appendTo(imageContainer)
@@ -79,6 +79,7 @@ $('#cardNameBtn').on('click', (e) => {
 $('#randomBtn').on('click', (e) => {
     e.preventDefault()
     $('#cardDiv').empty()
+    $('input[name=name').val('')
     $.get(`https://api.scryfall.com/cards/random`, (data) => {
 
         let rarity = $(`<div class="h3Div" id="rarity"></div>`).appendTo($('#cardDiv'))
@@ -91,10 +92,10 @@ $('#randomBtn').on('click', (e) => {
         $(`<h1 id="cardName">${data.name}<h1>`).appendTo(name)
 
         let price = $('<div class="h3Div" id="price"></div>').appendTo($('#cardDiv'))
-        data.prices.usd !== null ? $(`<h2>Price: $${data.prices.usd}</h2>`).appendTo(price) : $('<h2 "class="h3Div" >Sorry, no price available.</h2>').appendTo($(price))
+        data.prices.usd !== null ? $(`<h2>Price: $${data.prices.usd}</h2>`).appendTo(price) : $('<h2><em "class="h3Div">Sorry, no price available.<em></h2>').appendTo($(price))
 
         let imageContainer = $(`<div class="h3Div" id="imageContainer"></div>`).appendTo($('#cardDiv'))
-        data.image_uris ? $(`<img id="img" src="${data.image_uris.normal}">`).appendTo(imageContainer) : $('<h1><em>Sorry, no image available.<em><h1>').appendTo(imageContainer)
+        data.image_uris ? $(`<img id="img" src="${data.image_uris.normal}">`).appendTo(imageContainer) : $('<h1><em class="h3Div" id="noImg">Sorry, no image available.<em><h1>').appendTo(imageContainer)
      })
 })
 

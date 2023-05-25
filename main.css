@@ -8,9 +8,14 @@
     
 }
 
+html {
+    height: 100%;
+}
+
+
 body {
     padding: 2vw;
-    min-height: 100vw;
+    min-height: 100%;
     background-color: #3d2720;
     background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/05/28/Grey-Triangle-Mosaic-Background-Graphics-4222862-1-580x387.jpg');
 
@@ -125,6 +130,7 @@ label {
     margin: auto;
     background-color: silver;
     box-shadow:0 0 15px 4px grey;
+    overflow: auto;
 }
 
 .h3Div {
@@ -140,8 +146,8 @@ label {
 #imageContainer {
     height: 53vh;
     width: 20vw; 
-    bottom: 10vh;
-    background-color: transparent;
+    bottom: 9vh;
+    background-color: silver;
     
    
 }
@@ -195,4 +201,20 @@ h3 {
     border-radius: 4.5%;
     box-shadow:0 0 15px 4px grey;
     top: 1.5vw;
+    padding: 5px;
 }
+
+
+h1 {
+    background-color: silver;
+}
+
+#noImg {
+    background-color: silver;
+    top: 15vw;
+}
+
+em {
+    background-color: silver;
+}
+
