@@ -3,7 +3,17 @@
 	margin: 0;
 	box-sizing: 'border-box';
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: ghostwhite;
+	background-color: whitesmoke;
+    position: relative;
+    
+}
+
+body {
+    padding: 2vw;
+    min-height: 100vw;
+    background-color: #3d2720;
+    background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/05/28/Grey-Triangle-Mosaic-Background-Graphics-4222862-1-580x387.jpg');
+
     
 }
 
@@ -13,16 +23,16 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    column-gap: 20px;
     align-items: center;
     justify-content: center;
     border: 1px solid black;
 }
 
 #bodyDiv {
-    height: 100%;
-    width: 100%;
-    
+    height: 95vh;
+    width: 95vw;
+    flex-direction: column;
+    background-color: #313639;
 
 }
 
@@ -32,14 +42,25 @@
 }
 
 #headerDiv {
-    width: 100%;
+    width: 81vw;
     margin: auto;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e19635a8-5215-476e-9824-9e3252b9b494/d5ztenn-e1bef64a-f988-46f1-ad2c-9acdac06627f.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UxOTYzNWE4LTUyMTUtNDc2ZS05ODI0LTllMzI1MmI5YjQ5NFwvZDV6dGVubi1lMWJlZjY0YS1mOTg4LTQ2ZjEtYWQyYy05YWNkYWMwNjYyN2YuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.AkZovpxhtDwOg2qfvvUZuEIsc2HnSlvVuaJDhjHdAdY');
+    background-repeat: space;
+    background-size: contain;
+    background-color: transparent;
+    border: transparent
+    
 
 }
 
 #title {
     font-family: 'Yusei Magic', serif;
-    
+    height: 8vh;
+    background-color: #313639;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: linen;
 }
 
 .form {
@@ -47,6 +68,9 @@
     align-items: center;
     justify-content: center;
     display: table;
+    width: 20vw;
+    height: 5vh;
+    color: linen;
     
 }
 
@@ -55,26 +79,95 @@
     display: table-row;
     align-items: center;
     justify-content: center;
+    background-color: #313639;
+    
 }
 
 label,
 input {
     display: table-cell;
-    margin-bottom: 10px;
+    margin-bottom: 1vh;
+    background-color: transparent;
+}
+
+input {
+    border-radius: 25px;
+    width: 100%;
+    left: 1vw;
+    text-align: center;
+    background-color: silver;
 }
 
 label {
-    padding-right: 10px;
+    padding-right: 1vw;
+    
 }
 
 #cardDiv {
-    height: 50vw;
-    width: 40vw
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+    background-color: silver;
+    box-shadow:0 0 15px 4px grey;
 }
 
-/* #rarity,
-#rulings,
-#name,
+.h3Div {
+    border: 1px solid transparent;
+    height: 2vh;
+    width: 15vw;
+    justify-content: center;
+    text-align: center;
+    background-color: silver;
+}
+
+
+#imageContainer {
+    height: 53vh;
+    width: 20vw; 
+    bottom: 10vh;
+    background-color: #3d2720;
+    
+   
+}
+
+#searchDiv {
+    height: 5vh;
+    background-color: transparent;
+    border: transparent
+}
+
+#name {
+    right: 7.5vw;
+    text-decoration: underline;
+}
+
+#rarity {
+    right: 1.9vw;
+    top: 35vh;
+}
+
 #set {
-    display: flex;
-} */
+    right: 17vw;
+    top: 25vh;
+    
+}
+
+#price {
+    top: 65vh;
+    right: 22.5vw;
+
+}
+
+#img {
+    top: .75vh;
+    border-radius: 4.5%;
+}
+
+h2,
+h3 {
+    background-color: silver;
+}
+
+#cardName {
+    background-color: transparent;
+}
