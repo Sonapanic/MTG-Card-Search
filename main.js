@@ -19,7 +19,6 @@ function randomizer() {
 }
 
 
-
 $('#cardNameBtn').on('click', (e) => {
     e.preventDefault()
     $.get(`https://api.scryfall.com/cards/search?q=${$('input[name=name]').val()}`, (data) => {
